@@ -1,0 +1,92 @@
+/* 🔹 إعادة تعيين القيم الافتراضية ومنع التحرك الأفقي */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🔹 تنسيق الخلفية واللون العام */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* 🔴 أسود للخلفية */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* يمنع التحرك الأفقي */
+}
+
+/* 🔹 تنسيق الحاوية الرئيسية */
+.container {
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* 🔹 تنسيق العنوان */
+h1 {
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #d10000; /* 🔴 لون أحمر */
+}
+
+/* 🔹 تنسيق معرض الصور */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 🔹 تنسيق الصور */
+.gallery img {
+    width: 100%;
+    max-width: 250px;
+    border: 3px solid #d10000; /* 🔴 لون الإطار أحمر */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* 🔹 تأثير عند تمرير الماوس على الصور */
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #d10000;
+}
+
+/* 🔹 تحسين التناسق مع الهواتف */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        max-width: 90%;
+    }
+}
+
+/* 🔹 تنسيق التوقيع */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer span {
+    color: #d10000; /* 🔴 لون التوقيع أحمر */
+}
